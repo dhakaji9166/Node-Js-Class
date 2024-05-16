@@ -3,7 +3,7 @@
 const http = require('http');
 const fs = require('fs');
 
-const index = fs.readFileSync('index.html','utf8');
+const index = fs.readFileSync('index.html', 'utf8');
 const data = JSON.parse(fs.readFileSync('Data.json'));
 
 const productes = data.products;
@@ -27,7 +27,7 @@ const server = http.createServer((req, res) => {
 
         res.end(modifiedIndex);
 
-
+        return;
     }
 
 
