@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        .product-container {
+            background-color: white;
+            /* padding: 20px; */
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .product-details {
+            color: #666;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .product-rating, .product-title {
+            flex: 1;
+            text-align: left;
+        }
+        .favorite-icon {
+            font-size: 24px;
+            color: gray;
+            cursor: pointer;
+        }
+        .favorite-icon.active {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <img class="product-image" src="**img**" alt="Product Photo">
+        <div class="product-price">$**price**</div>
+        <div class="product-details">
+            <h2>**title**</h2>
+            <p>**description**</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="product-actions">
+            <span class="product-rating">Rating:**rating**</span>
+       
+            <span class="favorite-icon" onclick="toggleFavorite(this)">❤️</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleFavorite(icon) {
+            icon.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
